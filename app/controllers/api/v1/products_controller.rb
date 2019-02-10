@@ -3,9 +3,9 @@ class Api::V1::ProductsController < ApplicationController
     before_action :authenticate_with_token!, only: [:create]
     
     def index
-        products = Product.search(params).page(params[:page]).per(params[:per_page])
-        render json: products, meta: pagination(orders, params[:per_page])
-    end
+        products = params[:product_ids].present? ? Product.find(params[:product_ids]) : Product.all
+        respond_with products
+      end
     
     def show
         respond_with Product.find(params[:id])
