@@ -18,7 +18,11 @@ gem 'puma', '~> 3.11'
 gem "devise"
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+#gem 'sabisu_rails', github: "IcaliaLabs/sabisu-rails"
+#gem 'compass-rails'
+#gem 'furatto'
+#gem 'font-awesome-rails'
+#gem 'simple_form'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

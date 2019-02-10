@@ -5,6 +5,7 @@ EcomApi::Application.routes.draw do
   namespace :api, defaults: { format: :json },path: '/' do
     scope module: :v1 do
       # We are going to list our resources here
+      resources :users, :only => [:show, :create, :update, :destroy]
     end
   end  
 
